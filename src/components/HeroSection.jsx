@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Download, Phone, ArrowDown } from "lucide-react";
 import Resume from "../assets/Sarthak-Software-Developer.pdf";
+import ProfilePhoto from '../assets/IMG_20251222_205735.jpg'
 
 export default function HeroSection() {
   const scrollToSection = (href) => {
@@ -34,7 +35,7 @@ export default function HeroSection() {
               <div className="absolute inset-0 bg-purple-500/20 rounded-3xl rotate-6 blur-xl"></div>
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden border-4 border-purple-500/50">
                 <img
-                  src="src\assets\IMG_20251222_205735.jpg"
+                  src={ProfilePhoto}
                   alt="John Doe"
                   className="w-90 h-90 sm:w-120 sm:h-120 object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />
