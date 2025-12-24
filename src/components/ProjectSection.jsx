@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Folder, Star, GitFork } from 'lucide-react';
+import { useState } from 'react';
 //import { Button } from '@/components/ui/button';
 
 const projects = [
@@ -36,6 +37,8 @@ const projects = [
 ];
 
 export default function ProjectsSection() {
+  const [activeIndex, setActiveIndex] = useState(null);
+
   return (
     <section id="projects" className="relative py-16 sm:py-24 lg:py-32 bg-[#0f0f14]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,6 +70,9 @@ export default function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              onClick={() =>
+                setActiveIndex(activeIndex === index ? null : index)
+              }
               className="group relative rounded-2xl overflow-hidden bg-[#1a1a24] border border-purple-500/20 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500"
             >
               {/* Image */}
@@ -74,12 +80,22 @@ export default function ProjectsSection() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110"
                 />
+                <span className="absolute bottom-3 left-3 text-xs text-white md:hidden">
+                  Tap to view links
+                </span>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 
                 {/* Overlay Links */}
-                <div className="absolute inset-0 flex items-center justify-center gap-3 sm:gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/80 backdrop-blur-sm">
+                <div className={`
+                                  absolute inset-0 flex items-center justify-center gap-3 sm:gap-4
+                                  bg-black/80 backdrop-blur-sm
+                                  transition-opacity duration-300
+                                  opacity-0
+                                  group-hover:opacity-100
+                                  ${activeIndex === index ? "opacity-100" : ""}
+                                `}>
                   <a
                     href={project.github}
                     target="_blank"

@@ -190,7 +190,12 @@ export default function SkillsSection() {
                 </div>
                 
                 {/* Tech Name - Shows on hover */}
-                <div className="relative z-10 text-xs sm:text-sm font-bold text-white group-hover:text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="
+                  relative z-10 text-xs sm:text-sm font-bold text-white text-center
+                  opacity-80
+                  md:opacity-0 md:group-hover:opacity-100
+                  transition-opacity duration-300
+                ">
                   {tech.name}
                 </div>
 

@@ -104,7 +104,7 @@ export default function ContactSection() {
               <div className="relative">
                 <div className="flex items-center gap-2 mb-6">
                   <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400" />
-                  <span className="text-sm sm:text-base text-gray-400">San Francisco, CA</span>
+                  <span className="text-sm sm:text-base text-gray-400">Pune, Maharashtra</span>
                 </div>
 
                 <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4">
@@ -131,7 +131,7 @@ export default function ContactSection() {
                     // variant="outline"
                     className="flex justify-center px-4 sm:px-4 py-4 sm:py-4 bg-transparent border-2 border-purple-500 hover:bg-purple-500 text-purple-400 hover:text-white rounded-xl font-medium transition-all duration-300"
                   >
-                    <a className="flex items-center" href="tel:+1234567890">
+                    <a className="flex items-center" href="tel:+917972005578">
                       <Phone className="justify-baseline w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                       Call Now
                     </a>
