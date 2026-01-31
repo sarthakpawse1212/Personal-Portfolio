@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
+import { Link } from 'react-router-dom';
 
 const navLinks = [
   { name: 'Home', href: '#hero' },
@@ -9,6 +10,7 @@ const navLinks = [
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
   { name: 'Contact', href: '#contact' },
+  { name: 'Blogs', href: '#blogs' },
 ];
 
 export default function Navbar() {
@@ -71,7 +73,11 @@ export default function Navbar() {
                   transition={{ delay: index * 0.1 }}
                   className="relative px-4 py-2 text-sm text-gray-300 hover:text-purple-400 transition-colors group"
                 >
-                  {link.name}
+                  {link.isRouterLink ? (
+                    <Link to={link.linkTo}>{link.name}</Link>
+                  ) : (
+                  link.name
+                  )}
                   <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-purple-500 group-hover:w-full transition-all duration-300" />
                 </motion.button>
               ))}
@@ -108,7 +114,11 @@ export default function Navbar() {
                   transition={{ delay: index * 0.1 }}
                   className="text-left text-2xl font-medium text-gray-300 hover:text-purple-400 py-4 border-b border-purple-500/20"
                 >
-                  {link.name}
+                  {link.isRouterLink ? (
+                    <Link to={link.linkTo}>{link.name}</Link>
+                  ) : (
+                  link.name
+                  )}
                 </motion.button>
               ))}
             </div>

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Download, Phone, ArrowDown } from "lucide-react";
 import Resume from "../assets/Sarthak-Software-Developer.pdf";
-import ProfilePhoto from '../assets/IMG_20251222_205735.jpg'
+import ProfilePhoto from '../assets/IMG_20251222_205735.jpg' 
 
 export default function HeroSection() {
   const scrollToSection = (href) => {
@@ -17,10 +17,10 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center justify-center bg-[#0a0a0f]"
     >
       {/* Gradient Orbs */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 -left-20 w-96 h-96 bg-purple-600/20 rounded-full blur-[100px]" />
         <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px]" />
-      </div>
+      </div> */}
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-32">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
@@ -36,13 +36,10 @@ export default function HeroSection() {
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden border-4 border-purple-500/50">
                 <img
                   src={ProfilePhoto}
-                  alt="John Doe"
+                  alt="sarthak-photo"
                   className="w-90 h-90 sm:w-120 sm:h-120 object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />
               </div>
-              {/* <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center shadow-2xl shadow-purple-500/50">
-                <span className="text-4xl">👋</span>
-              </div> */}
             </div>
           </motion.div>
 
@@ -58,20 +55,18 @@ export default function HeroSection() {
             </span>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6">
-              <span className="text-white">Hi, Im </span>
+              <span className="text-white">Hi, I&apos;m </span>
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Sarthak Pawse
+                Sarthak
               </span>
             </h1>
 
             <p className="text-xl sm:text-2xl lg:text-3xl text-gray-400 mb-4 sm:mb-6 font-light">
-              Full Stack Developer
+              Software Engineer crafting scalable systems that don’t break at scale.
             </p>
 
             <p className="text-base sm:text-lg text-gray-400 mb-8 sm:mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Crafting digital experiences with clean code and creative design.
-              Passionate about building scalable applications that make a
-              difference.
+              I believe great software is invisible — it just works.
             </p>
 
             {/* CTA Buttons */}
@@ -88,7 +83,7 @@ export default function HeroSection() {
                 //variant="outline"
                 className="px-4 sm:px-6 py-3 sm:py-4 bg-transparent border-2 border-purple-500 hover:bg-purple-500 text-purple-400 hover:text-white rounded-lg text-base sm:text-lg font-medium transition-all duration-300"
               >
-                Get In Touch
+                Let’s Build Something Solid
               </button>
             </div>
 

@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Folder, Star, GitFork } from 'lucide-react';
+import { ExternalLink, Github, Folder } from 'lucide-react';
 import { useState } from 'react';
 //import { Button } from '@/components/ui/button';
+import portfolioImage from '../assets/portfolio.png'
 
 const projects = [
   {
-    title: 'Full Stack E-Commerce Application',
-    description: 'This is a personal full-stack e-commerce project that I built from the ground using core web technologies. The main purpose of this project was to understand how things actually work behind the scenes instead of relying on frameworks or ready-made UI libraries.',
+    title: 'Full Stack E-Commerce Application (From Scratch)',
+    description: 'Built without frameworks to understand how the web really works, developed from scratch using core web technologies to deeply understand frontend–backend interaction.',
     image: 'https://images.unsplash.com/photo-1586880244406-556ebe35f282?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZSUyMGNvbW1lcmNlfGVufDB8fDB8fHww',
     tags: ['HTML', 'CSS', 'JavaScript', 'MongoDB', 'NodeJS'],
     github: 'https://github.com/sarthakpawse1212/FullStackScratch',
@@ -16,7 +17,7 @@ const projects = [
   },
   {
     title: 'Microservices-Based E-Commerce Backend System',
-    description: 'This is a personal project where I designed and built an e-commerce system using a microservices approach.',
+    description: 'Designed for scale, not just functionality, production-style e-commerce backend using a microservices architecture.',
     image: 'https://images.unsplash.com/photo-1667372459510-55b5e2087cd0?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     tags: ['Node.js', 'TypeScript', 'Kafka', 'ElasticSearch', 'Stripe', 'JWT', 'Docker', 'Jest', 'ORM'],
     github: 'https://github.com/sarthakpawse1212/Microservices-E-commerce-',
@@ -25,13 +26,13 @@ const projects = [
     stats: { stars: 89, forks: 21 },
   },
   {
-    title: 'Mini Projects (Frontend & Full Stack)',
-    description: 'This is a collection of small but focused projects that I built to understand how modern frontend and full-stack applications are structured.',
-    image: 'https://images.unsplash.com/photo-1572177812156-58036aae439c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvamVjdHxlbnwwfHwwfHx8MA%3D%3D',
-    tags: ['ReactJS', 'Redux', 'Postgress', 'Tailwind', 'REST APIs'],
+    title: 'Full-Stack Portfolio Website with Blog Platform',
+    description: 'More than a portfolio, A personal publishing platform, built to understand modern development along with content management, routing, and dynamic rendering.',
+    image: portfolioImage,
+    tags: ['ReactJS', 'NodeJs', 'MongoDb', 'Tailwind', 'REST APIs'],
     github: 'https://github.com/sarthakpawse1212/Mini-Projects',
     live: 'https://github.com/sarthakpawse1212/Mini-Projects',
-    featured: false,
+    featured: true,
     stats: { stars: 256, forks: 67 },
   }
 ];
@@ -51,13 +52,13 @@ export default function ProjectsSection() {
           className="text-center mb-12 sm:mb-16 lg:mb-20"
         >
           <span className="inline-block px-4 py-2 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 text-xs sm:text-sm font-medium mb-4 sm:mb-6">
-            Portfolio Showcase
+            Inspired by production-grade systems
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
-            Featured Projects
+            Things I’ve Built
           </h2>
           <p className="max-w-2xl mx-auto text-gray-400 text-base sm:text-lg px-4">
-            A collection of projects showcasing my expertise in building scalable applications (Quality Over Quantity)
+            Real-world projects focused on scalability, performance, and clean architecture.
           </p>
         </motion.div>
 
@@ -153,7 +154,7 @@ export default function ProjectsSection() {
                 </div>
 
                 {/* Stats */}
-                <div className="flex items-center gap-4 text-xs text-gray-500">
+                {/* <div className="flex items-center gap-4 text-xs text-gray-500">
                   <div className="flex items-center gap-1">
                     <Star className="w-3.5 h-3.5" />
                     {project.stats.stars}
@@ -162,7 +163,7 @@ export default function ProjectsSection() {
                     <GitFork className="w-3.5 h-3.5" />
                     {project.stats.forks}
                   </div>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           ))}
@@ -182,6 +183,22 @@ export default function ProjectsSection() {
             <Github className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
             View All on GitHub
           </Button> */}
+        </motion.div>
+
+        {/* View More */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-center mt-12 sm:mt-16"
+        >
+          <button
+          
+            className="px-4 sm:px-6 py-3 sm:py-4 bg-transparent border-2 border-purple-500 hover:bg-purple-500 text-purple-400 hover:text-white rounded-lg text-base sm:text-lg font-medium transition-all duration-300"
+          >
+            <a href="https://github.com/sarthakpawse1212"> View All on GitHub</a>
+           
+          </button>
         </motion.div>
       </div>
     </section>

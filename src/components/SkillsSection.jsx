@@ -203,11 +203,6 @@ export default function SkillsSection() {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
               </motion.div>
 
-              {/* Floating Tooltip
-              <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 px-4 py-2 bg-gray-900 text-white text-xs sm:text-sm font-medium rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap pointer-events-none z-20 shadow-xl">
-                {tech.name}
-                <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-gray-900 rotate-45" />
-              </div> */}
             </motion.div>
           ))}
         </div>
